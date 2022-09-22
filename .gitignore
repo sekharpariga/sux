@@ -5,6 +5,8 @@
 *.so
 *.dylib
 *.bin*
+*.pdf
+*.PDF
 
 # Test binary, built with `go test -c`
 *.test

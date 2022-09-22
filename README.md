@@ -5,7 +5,7 @@ Giving another try to build the OS from scrach
 ### Steps followed in BIOS
 
 	1. POST (Power-on self-test):
-		This tests the hardware of the computer before loading OSloading OS
+		This tests the hardware of the computer before loading running OS
 	2. Bootstrap Loader
 		This locates the OS
 	3. Software/Drivers
