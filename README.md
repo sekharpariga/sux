@@ -11,6 +11,7 @@ Giving another try to build the OS from scrach
 	3. Software/Drivers
 		This locates the software and drivers that interface with the OS once running
 	4. CMOS Setup (Complementary Metal-oxide Semiconductor)
+		This is a configuration program that enable users to alter hardware and system settings. CMOS is the name of BIOS’ non-volatile memory.
 
 ## Tools
 
