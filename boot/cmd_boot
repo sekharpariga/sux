@@ -1,2 +1,4 @@
 ## List of all commands
-nasm -f bin asm_file -o exe_out_file
+nasm -f bin first_boot_sector.asm -o first_boot_sector.bin
+
+ qemu-system-x86_64.exe first_boot_sector.bin
