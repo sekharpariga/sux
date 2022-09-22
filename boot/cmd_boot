@@ -1,0 +1,2 @@
+## List of all commands
+nasm -f bin asm_file -o exe_out_file

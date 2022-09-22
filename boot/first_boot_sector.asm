@@ -1,5 +1,4 @@
 ; Infinite loop
-
 loop:
     jmp loop
 
