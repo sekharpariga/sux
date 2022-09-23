@@ -46,9 +46,9 @@ int 0x10
 
 call twoNewLines
 
-%include "utility_routines.asm"
-
 jmp $
+
+%include "../util/asm/print.asm"
 
 
 ; boot sector magic number

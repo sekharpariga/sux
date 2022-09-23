@@ -24,7 +24,7 @@ main:
 
 jmp $
 
-%include "utility_routines.asm"
+%include "../util/asm/print.asm"
 
 ;data
 
