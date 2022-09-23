@@ -1,6 +1,6 @@
-# OS
+# OS  Arch: x86 Intel
 
-Giving another try to build the OS from scrach
+Giving another try to build the OS from scratch for x86 intel architecture
 
 ### Steps followed in BIOS
 
