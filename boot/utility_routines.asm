@@ -24,17 +24,17 @@ twoNewLines:
   popa
   ret
 
-  newline:
-    pusha
+newline:
+  pusha
 
-    mov ah, 0x0e
-    mov al, 0xa ; line feed
-    int 0x10
-    mov al, 0x0d ; carriage return
-    int 0x10
+  mov ah, 0x0e
+  mov al, 0xa ; line feed
+  int 0x10
+  mov al, 0x0d ; carriage return
+  int 0x10
 
-    popa
-    ret
+  popa
+  ret
 
 
 space:
