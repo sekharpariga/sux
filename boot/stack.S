@@ -48,7 +48,7 @@ call twoNewLines
 
 jmp $
 
-%include "../util/asm/print.asm"
+%include "../util/asm/print.S"
 
 
 ; boot sector magic number

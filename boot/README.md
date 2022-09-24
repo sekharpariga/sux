@@ -1,5 +1,5 @@
 ## List of all commands
-    nasm -f bin main.asm -o main.bin
+    nasm -f bin main.S -o main.bin
 
 ### running the image using qemu
 #### windows:
