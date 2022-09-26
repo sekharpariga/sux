@@ -2,14 +2,14 @@
 print:
   pusha
 
-  start:
-    mov al, [bx]
-    cmp al, 0
-    je done
-    mov ah, 0x0e
-    int 0x10
-    add bx, 1
-    jmp start
+start:
+  mov al, [bx]
+  cmp al, 0
+  je done
+  mov ah, 0x0e
+  int 0x10
+  add bx, 1
+  jmp start
 
 twoNewLines:
   pusha
@@ -50,13 +50,13 @@ space:
 
 loop:
   pusha
-  loopstart:
-    mov ah, 0x0e
-    cmp cl, 0
-    je done
-    int 0x10
-    sub cl, 1
-    jmp loopstart
+loopstart:
+  mov ah, 0x0e
+  cmp cl, 0
+  je done
+  int 0x10
+  sub cl, 1
+  jmp loopstart
 
 ; frequently used routines
 done:
