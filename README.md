@@ -1,4 +1,5 @@
-# OS  Arch: x86 Intel
+# Sux OS
+## Arch: x86 Intel
 
 Giving another try to build the OS from scratch for x86 intel architecture
 
