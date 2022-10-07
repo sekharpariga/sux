@@ -26,3 +26,6 @@ Giving another try to build the OS from scratch for x86 intel architecture
 	2. qemu
 	3. make
 	4. gcc
+
+
+Sux -> Sekhar + ux (Linux/Unix)
