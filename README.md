@@ -16,10 +16,10 @@ Giving another try to build the OS from scratch for x86 intel architecture
 
 
 #### Adapting "Release Candidate" development model (Window Size : 1 Month)
-	- After each mainline release, there is a 3-week "merge window" period during which new major
-		features are introduced into the kernel (Initial 1-week for gathering the features, 2-weeks for development)
-	- After merge window closes, there is a 1-week bugfix and stabilization period with daily "release candidate" snapshots
-	- rc7 is usually the release candidate
+ - After each mainline release, there is a 3-week "merge window" period during which new major
+   features are introduced into the kernel (Initial 1-week for gathering the features, 2-weeks for development)
+ - After merge window closes, there is a 1-week bugfix and stabilization period with daily "release candidate" snapshots
+ - rc7 is usually the release candidate
 
 ### Tools
 
@@ -27,3 +27,6 @@ Giving another try to build the OS from scratch for x86 intel architecture
 	2. qemu
 	3. make
 	4. gcc
+
+
+Sux -> Sekhar + ux (Linux/Unix)
