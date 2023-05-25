@@ -8,7 +8,7 @@
 unsigned int fb_char_write(unsigned int pos, char c, unsigned char fg, unsigned char bg)
 {
     fb[pos] = c;
-    fb[pos+1] = ((fg & 0x0F) << 4 | (bg & 0x0F));
+    fb[pos+1] = (((fg & 0x0F) << 4) | (bg & 0x0F));
 
     cursor_position += 1;
     fb_cursor_mv(cursor_position);
