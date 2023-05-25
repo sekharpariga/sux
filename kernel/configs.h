@@ -2,4 +2,4 @@
 
 unsigned int cursor_position = 0;
 
-char *fb = 0x000B8000;
+char *fb = (char *) 0x000B8000;

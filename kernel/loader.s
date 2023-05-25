@@ -5,7 +5,7 @@ FLAGS        equ 0x0
 CHECKSUM     equ -MAGIC_NUMBER
 KERNEL_STACK_SIZE equ 4096
 
-extern sum_of_three
+extern c_entry
 section .text:
 align 4
     dd MAGIC_NUMBER
@@ -19,7 +19,7 @@ loader:
     push dword 3
     push dword 3
     push dword 4
-    call sum_of_three
+    call c_entry
 
 
 .loop:
