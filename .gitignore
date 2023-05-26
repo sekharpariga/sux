@@ -8,6 +8,7 @@
 *.pdf
 *.PDF
 *.asm
+final.s
 
 # Test binary, built with `go test -c`
 *.test

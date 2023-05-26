@@ -1,7 +1,7 @@
 
 OBJECTS = loader.o kmain.o fb_write.o fb_cursor_mv.o io.o
 CC = gcc
-CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartfiles -nodefaultlibs -Wall -Werror -Wextra -c
+CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartfiles -nodefaultlibs -Wall -Werror -Wextra -c -g
 LDFLAGS = -T link.ld -melf_i386
 AS = nasm
 ASFLAGS = -f elf
@@ -26,6 +26,10 @@ os.iso: kernel.elf
 
 run: os.iso
 	bochs -f bochsrc.txt -q
+
+disassembly: kernel.elf
+	objdump -D kernel.elf > /tmp/final.s
+	vi /tmp/final.s
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
