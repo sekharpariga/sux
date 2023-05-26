@@ -7,6 +7,7 @@
 #define FB_HIGH_BYTE_COMMAND    14
 #define FB_LOW_BYTE_COMMAND     15
 
+extern unsigned int cursor_position;
 void fb_cursor_mv(unsigned int pos);
 
 #endif /* _FB_CURSOR_MV_H */

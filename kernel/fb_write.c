@@ -1,5 +1,4 @@
 #include "fb_write.h"
-#include "configs.h"
 #include "fb_cursor_mv.h"
 
 #define WRITE_FG_COLOR  4

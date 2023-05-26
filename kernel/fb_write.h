@@ -23,7 +23,8 @@
  * white        15
  *
  */
-
+extern unsigned int cursor_postion;
+extern char *fb;
 void fb_char_write(unsigned int po, char c, unsigned char fg, unsigned char bg);
 void fb_write(char *buf, unsigned int len);
 
