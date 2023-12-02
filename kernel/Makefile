@@ -1,23 +1,41 @@
-all : os-image
 
-run : all
-	qemu-system-x86_64 os-image
+OBJECTS = loader.o kmain.o fb_write.o fb_cursor_mv.o io.o
+CC = gcc
+CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartfiles -nodefaultlibs -Wall -Werror -Wextra -c -g
+LDFLAGS = -T link.ld -melf_i386
+AS = nasm
+ASFLAGS = -f elf
 
-os-image : boot_sect.bin kernel.bin
-	cat $^ > os-image
+all: kernel.elf
 
-boot_sect.bin : boot_sect.S
-	nasm -f bin boot_sect.S -o $@
+kernel.elf: $(OBJECTS)
+	ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
 
-kernel.bin : kernel_entry.o kernel.o
-	ld -o kernel.bin -Ttext 0x1000 $^ --oformat binary
+os.iso: kernel.elf
+	cp kernel.elf iso/boot/kernel.elf
+	genisoimage -R						\
+		-b boot/grub/stage2_eltorito	\
+		-no-emul-boot					\
+		-boot-load-size 4				\
+		-A os							\
+		-input-charset utf8				\
+		-quiet							\
+		-boot-info-table				\
+		-o os.iso						\
+		iso
 
-kernel.o : kernel.c
-	gcc -ffreestanding -c kernel.c -o $@
+run: os.iso
+	bochs -f bochsrc.txt -q
 
-kernel_entry.o : kernel_entry.S
-	nasm -f elf kernel_entry.S -o $@
+disassembly: kernel.elf
+	objdump -D kernel.elf > /tmp/final.s
+	vi /tmp/final.s
 
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@
 
-clean :
-	rm *.bin *.o
+%.o: %.s
+	$(AS) $(ASFLAGS) $< -o $@
+
+clean:
+	rm -rf *.o kernel.elf os.iso

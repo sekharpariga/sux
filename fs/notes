@@ -1,0 +1,25 @@
+.TH fs.sh
+.SH NAME 
+commands to explore the filesystems in linux
+.SH Commands
+.BR findmnt
+-> to know which filesystem installed
+.TP
+.BR dumpe2fs
+ -> displays filesystems information about superblocks and block group information
+.BR 
+.SH DESCRIPTION
+.BR 
+filesystem contains below things
+.TP
+Blocks
+.TP
+Block groups
+.TP
+Group descriptor table
+.TP
+Superblock
+.TP
+Inodes
+.TP
+Directory entries
